@@ -38,7 +38,6 @@ class UserInterface {
   static styleAlertElement(el) {
     el.style.borderWidth = "2px";
     el.style.borderColor = "#dc3545";
-    el.style.color = "#dc3545";
 
     setTimeout(function() {
       console.log("Hello");
