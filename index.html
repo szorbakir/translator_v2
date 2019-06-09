@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <!--Custom-btn stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TranslateMe</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark">
+      <a class="navbar-brand" href="#" style="color: #ffffff">
+        <img
+          src="image/language-solid.svg"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Translate<span style="color:#122628 ">Me</span>
+      </a>
+      <ul class="list-inline text-center" style="margin-top: 15px">
+        <li class="list-inline-item">
+          <a id="facebook" target="_blank" href="https://www.facebook.com/szorbakir"
+            ><i class="fab fa-facebook-f"> </i
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a id="instagram" target="_blank" href="https://www.instagram.com/szorbakir/"
+            ><i class="fab fa-instagram"> </i
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            id="linkedin"
+            target="_blank"
+            href="https://www.linkedin.com/in/ibrahim-soner-zorbak%C4%B1r-78215793/"
+            ><i class="fab fa-linkedin-in"> </i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          id="sourceTextAreaElement"
+          rows="5"
+          style="resize: none"
+        ></textarea>
+      </div>
+      <div class="row justify-content-start">
+        <div>
+          <select class="custom-select" id="languageSelectMenu">
+            <option selected>Choose target Language</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" id="translateButton" class="btn btn-primary">
+            Translate
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-start">
+        <textarea
+          class="form-control"
+          id="targetTextAreaElement"
+          rows="5"
+          style="resize: none"
+          readonly
+        ></textarea>
+      </div>
+    </div>
+    <div class="container">
+      <div id="alertDiv" class="row justify-content-center"></div>
+    </div>
+
+    <!-- Bootstrap scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="translator.js"></script>
+    <script src="project.js"></script>
+    <script src="userInterface.js"></script>
+  </body>
+</html>
