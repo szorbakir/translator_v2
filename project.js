@@ -13,7 +13,9 @@ function startTranslate() {
 
   translatorObject.targetLangName = languageSelectMenu.value;
 
-  if (languageSelectMenu.value === "Choose target Language" || sourceTextAreaElement.value === "") {
+  sourceText = sourceTextAreaElement.value.replace(/(\r\n|\n|\r)/gm, "");
+
+  if (languageSelectMenu.value === "Choose target Language" || sourceText === "") {
     if (languageSelectMenu.value === "Choose target Language") {
       UserInterface.showAlert("Please choose target Language!", alertDiv);
       UserInterface.styleAlertElement(languageSelectMenu);
@@ -23,7 +25,7 @@ function startTranslate() {
     }
   } else {
     translatorObject
-      .translateLanguage(sourceTextAreaElement.value)
+      .translateLanguage(sourceText)
       .then(text => UserInterface.addToUI(text.text[0], targetTextAreaElement))
       .catch(err =>
         UserInterface.showAlert("There is something wrong with HTTP request!!", alertDiv)
